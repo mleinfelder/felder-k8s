@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  labels: nfs
+  name: pv-nfs
+spec:
+  capacity:
+    storage: 1Gi
+  accessModes:
+    - ReadWriteOnce
+  persistentVolumeReclaimPolicy: Retain
+  storageClassName: giropops
+  mountOptions:
+    - hard
+    - nfsvers=4.1
+  nfs:
+    path: "/opt/sites"
+    server: 172.17.0.1
