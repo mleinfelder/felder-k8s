@@ -3,6 +3,5 @@ kind: StorageClass
 metadata:
    name: giropops
 provisioner: kubernetes.io/no-provisioner
-reclaimPolicy: apiVersion: v1
-kind: ReplicationController
+reclaimPolicy: Retain
 volumeBindingMode: WaitForFirstConsumer
