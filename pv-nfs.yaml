@@ -11,9 +11,6 @@ spec:
     - ReadWriteOnce
   persistentVolumeReclaimPolicy: Retain
   storageClassName: giropops
-  mountOptions:
-    - hard
-    - nfsvers=4.1
   nfs:
     path: "/opt/sites"
     server: 172.17.0.1
