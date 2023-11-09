@@ -25,5 +25,5 @@ spec:
           mountPath: /data
       volumes:
         - name: redis-data
-          persistentVolumeReClaim: 
+          persistentVolumeClaim: 
             claimName: meu-pvc 
