@@ -1,0 +1,17 @@
+# https://kubernetes.io/docs/concepts/storage/persistent-volumes/
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  labels:
+     pvc: meu-pvc-nfs
+  name: meu-pvc
+spec: 
+  accessModes:
+     - ReadWriteOnce
+  resources:
+    requests:
+      storage: 1Gi
+  storageClassName: giropops
+  selector:
+     matchLabels:
+       storage: nfs
